@@ -987,42 +987,79 @@ li.list_last {
     float: right;
     margin:10px 0 20px 0px;
     background: #FFF;
-    border: 2px solid #ffa124;
+    border: 2px solid #f89410;
     border-right: 0;
+    position: relative;
 }
 
-.headtop .ss_search_box .ss_search_panel .ss_search_input_wrap {
-    position: relative;
-    height: 35px;
+#searchType {
+    cursor: pointer;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 98px;
     background: #fff;
-    display: inline;
+    left:-2px;
+    top:0px;
+}
+
+#searchType li.type_selected {
+    height: 23px;
+    border-left: 2px solid #f89410;
+    border-right: 2px solid #f89410;
+    border-top: 0;
+    border-bottom: 0;
+    display: block;
+}
+#searchType li {
+    font-size: 16px;
+    height: 23px;
+    line-height: 24px;
+    padding: 7px 22px;
+    border-left: 0px;
+    border: 2px solid #f8bb6a;
+    display: none;
+}
+
+.searchtype_arrow {
+    height: 0;
+    width: 0;
     overflow: hidden;
-    border: 0;
+    font-size: 0;
+    line-height: 0;
+    border-width: 5px 5px 0;
+    border-style: solid dashed;
+    border-color: #f89410 transparent transparent;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    position: absolute;
+    top: 18px;
+    left: 73px;
 }
 
-.headtop .ss_search_box .ss_search_panel .ss_search_input_wrap .ss_search_input {
-    background: url(../images/icon_all.png) no-repeat -662px 7px;
-    padding-left: 30px;
-    position: relative;
-    height: 26px;
-    border: 0;
-    background: #FFF;
-    width: 363px;
-    color: #999;
+.headtop .ss_search_box .ss_search_input {
+    width: 304px;
+    height: 23px;
+    line-height: 23px;
     float: left;
-    line-height: 30px;
-    font-size: 14px
+    font-size: 16px;
+    padding: 7px 8px 7px 10px;
+    margin: 0 0 0 96px;
+    border: 0;
 }
 
-.headtop .ss_search_box .ss_search_panel .ss_search_button {
-    background: url(../images/icon_all.png) no-repeat 0 -120px;
-    width: 117px;
+.headtop .ss_search_box .ss_search_button {
     height: 37px;
-    border: 0;
+    width: 102px;
     color: #FFF;
-    font-weight: bold;
-    text-indent: -9999px;
-    float: right
+    font-size: 18px;
+    border: none;
+    background: #f89410;
+    float: right;
+    cursor: pointer;
 }
 
 .headtop .tips_kh {

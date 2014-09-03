@@ -15,7 +15,7 @@
     <link href="<?php echo site_url('assets/css/assist.css');?>" rel="stylesheet" type="text/css" />
     <link href="<?php echo site_url('assets/css/easydialog.css');?>" rel="stylesheet" type="text/css" />
     <link href="<?php echo site_url('assets/css/validform.css');?>" rel="stylesheet" type="text/css" />
-    
+
     <script type="text/javascript" src="<?php echo site_url('assets/js/jquery-1.11.1.min.js');?>"></script>
     <script type="text/javascript" src="<?php echo site_url('assets/js/main.js');?>"></script>
     <script type="text/javascript" src="<?php echo site_url('assets/js/easydialog.min.js');?>"></script>
@@ -58,12 +58,13 @@
       <!--search box-->
       <div class="ss_search_box">
         <form class="ss_search_form" action=""  method="get">
-            <div class="ss_search_panel">
-                <div class="ss_search_input_wrap">
-                    <input type="text" class="ss_search_input" placeholder="请输入搜索关键字">
-                </div>
-                <input type="submit" value="搜 索" class="ss_search_button">
-            </div>
+            <ul id="searchType">
+                <li data-searchtype="1" class="type_selected">网点</li>
+        	<li data-searchtype="4" style="display: none;">品牌</li>
+            </ul>
+            <div class="searchtype_arrow"></div>
+            <input type="text" class="ss_search_input" placeholder="请输入搜索关键字">
+            <input type="submit" value="搜 索" class="ss_search_button">
         </form>
        </div>
     <!--/search box-->
@@ -84,7 +85,7 @@
             <div class="select_other clearfix">
                 <?php if(!$islogin):?>
                     <button type="button" class="btn"><i class="icon-user"></i><a href="<?php echo site_url('login');?>">登陆</a></button>
-                    
+
                 <?php else:?>
                  <ul>
                     <li id="fat-menu" class="dropdown">
